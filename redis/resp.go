@@ -128,6 +128,8 @@ func (r *Resp) readBulk() (Value, error) {
 }
 
 func (v Value) Marshal() []byte {
+
+	// switch typ of v
 	switch v.typ {
 	case "array":
 		return v.marshalArray()

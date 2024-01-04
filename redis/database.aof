@@ -1,0 +1,16 @@
+*3
+$3
+set
+$4
+name
+$8
+zhangsan
+*4
+$4
+hset
+$5
+users
+$2
+u1
+$6
+kirito
