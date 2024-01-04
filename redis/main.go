@@ -38,6 +38,7 @@ func main() {
 		handler(args)
 	})
 
+	// accept connection
 	conn, err := listen.Accept()
 	if err != nil {
 		fmt.Println(err)
@@ -46,6 +47,8 @@ func main() {
 
 	defer conn.Close()
 
+	// todo: IO多路复用
+	// handler conn
 	for {
 		resp := NewResp(conn)
 		value, err := resp.Read()
