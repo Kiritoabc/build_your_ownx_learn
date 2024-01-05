@@ -42,6 +42,8 @@ func ListenAndServe(address string) {
 func Handle(conn net.Conn) {
 	// use bufio to create a reader
 	resp := NewResp(conn)
+	// close connection
+	defer conn.Close()
 	for {
 		value, err := resp.Read()
 		if err != nil {
